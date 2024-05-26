@@ -1,5 +1,5 @@
-appname = example
-package = example
+appname = base_plugin
+package = base_plugin
 
 # Default goal
 .DEFAULT_GOAL := help

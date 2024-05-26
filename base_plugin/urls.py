@@ -1,12 +1,12 @@
 """App URLs"""
 
 # Django
+# AA Example App
 from django.urls import path
 
-# AA Example App
-from example import views
+from base_plugin import views
 
-app_name: str = "example"
+app_name: str = "base_plugin"
 
 urlpatterns = [
     path("", views.index, name="index"),

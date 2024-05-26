@@ -1,14 +1,14 @@
 """Hook into Alliance Auth"""
 
 # Django
+# Alliance Auth
 from django.utils.translation import gettext_lazy as _
 
-# Alliance Auth
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
 # AA Example App
-from example import urls
+from base_plugin import urls
 
 
 class ExampleMenuItem(MenuItemHook):
@@ -18,16 +18,16 @@ class ExampleMenuItem(MenuItemHook):
         # setup menu entry for sidebar
         MenuItemHook.__init__(
             self,
-            _("Example App"),
+            _("Base Plugin App"),
             "fas fa-cube fa-fw",
-            "example:index",
-            navactive=["example:"],
+            "base_plugin:index",
+            navactive=["base_plugin:"],
         )
 
     def render(self, request):
         """Render the menu item"""
 
-        if request.user.has_perm("example.basic_access"):
+        if request.user.has_perm("base_plugin.basic_access"):
             return MenuItemHook.render(self, request)
 
         return ""
@@ -44,4 +44,4 @@ def register_menu():
 def register_urls():
     """Register app urls"""
 
-    return UrlHook(urls, "example", r"^example/")
+    return UrlHook(urls, "base_plugin", r"^base_plugin/")

@@ -5,17 +5,14 @@ requires = [
 ]
 
 [project]
-name = "aa-example-plugin"
-description = "Example Plugin for Alliance Auth (GitHub Version)"
+name = "base-plugin"
+description = "base_plugin description"
 readme = "README.md"
 keywords = [
     "allianceauth",
-    "example",
 ]
-license = {file = "LICENSE"}
-authors = [
-    { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
-]
+license = { file = "LICENSE" }
+authors = [{ name = "Swashman(John Nelson)", email = "jnelson2288@gmail.com" }]
 requires-python = ">=3.8"
 classifiers = [
     "Environment :: Web Environment",
@@ -41,13 +38,12 @@ dependencies = [
     "allianceauth<5.0.0,>=4",
 ]
 [project.urls]
-Changelog = "https://github.com/ppfeufer/aa-example-plugin/blob/master/CHANGELOG.md"
-"Issue / Bug Reports" = "https://github.com/ppfeufer/aa-example-plugin/issues"
+Documentation = "https://github.com/swashman/base_plugin#readme"
+Homepage = "https://github.com/swashman/base_plugin"
+Issues = "https://github.com/swashman/base_plugin/issues"
 
 [tool.hatch.version]
-path = "example/__init__.py"
+path = "base_plugin/__init__.py"
 
 [tool.hatch.build]
-include = [
-    "/example",
-]
+include = ["/base_plugin"]
