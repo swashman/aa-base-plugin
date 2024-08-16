@@ -12,7 +12,7 @@ keywords = [
     "allianceauth",
 ]
 license = { file = "LICENSE" }
-authors = [{ name = "Swashman(John Nelson)", email = "jnelson2288@gmail.com" }]
+authors = [ { name = "Swashman(John Nelson)", email = "jnelson2288@gmail.com" } ]
 requires-python = ">=3.8"
 classifiers = [
     "Environment :: Web Environment",
@@ -35,15 +35,14 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth<5.0.0,>=4",
+    "allianceauth<5,>=4",
 ]
-[project.urls]
-Documentation = "https://github.com/swashman/base_plugin#readme"
-Homepage = "https://github.com/swashman/base_plugin"
-Issues = "https://github.com/swashman/base_plugin/issues"
+urls.Documentation = "https://github.com/swashman/base_plugin#readme"
+urls.Homepage = "https://github.com/swashman/base_plugin"
+urls.Issues = "https://github.com/swashman/base_plugin/issues"
 
 [tool.hatch.version]
 path = "base_plugin/__init__.py"
 
 [tool.hatch.build]
-include = ["/base_plugin"]
+include = [ "/base_plugin" ]
